@@ -4,8 +4,8 @@ import {useHistory} from 'react-router-dom'
 const MovieList = props => {
   return (
     <div className="movie-list">
-      {props.movies.map(movie => (
-        <MovieDetails key={movie.id} movie={movie} />
+      {props.movies.map((movie, index) => (
+        <MovieDetails key={index} movie={movie} />
       ))}
     </div>
   );
