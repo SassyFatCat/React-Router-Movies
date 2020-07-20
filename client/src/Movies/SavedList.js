@@ -7,8 +7,8 @@ const history = useHistory();
 return (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
-    {props.list.map(movie => (
-      <span className="saved-movie">{movie.title}</span>
+    {props.list.map((movie, index) => (
+      <span key={index} className="saved-movie">{movie.title}</span>
     ))}
     <div onClick={() => history.push('/')} className="home-button">Home</div>
   </div>
